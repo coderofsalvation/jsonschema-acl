@@ -1,0 +1,3 @@
+#!/bin/bash 
+SELF="$(dirname "$(readlink -f "$0")" )"; cd "$SELF"
+browserify -r ../src/index.js:jsonschema-acl -o jsacl.js

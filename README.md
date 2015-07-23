@@ -8,6 +8,10 @@ Handy validator before doing db inserts, api replies, form submits etc.
 
     npm install jsonschema-acl
 
+or in the browser:
+    
+    <script type="text/javascript" src="jsacl.js"></script>
+
 Basically its just jsonschema validation which checks for an `acl`-field
 
     var v = require("jsonschema-acl");
@@ -44,3 +48,7 @@ Basically its just jsonschema validation which checks for an `acl`-field
 ### Docs 
 
 * see [jsonschema](https://www.npmjs.com/jsonschema) which is used under the hood
+
+### Todo 
+
+* test browser version using browserify

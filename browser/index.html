@@ -1,0 +1,37 @@
+<html>
+<body>
+
+<script type="text/javascript" src="jsacl.js"></script>
+<script>
+v = require("jsonschema-acl")
+
+var data = {
+  foo: 4
+};
+
+var schema = {
+  type: "object",
+  properties: {
+    foo: {
+      type: "number",
+      acl: {
+        create: ["admin", "user"],
+        read:   ["*"],
+        update: ["admin"],
+        delete: ["admin"]
+      }
+    }
+  }
+};
+
+var user = { roles: ["admin","user"] }   // this would be retrieved from the db somehow 
+
+if( v.validate(data, schema, "create", user.roles ).errors.length == 0 ){
+  alert("validated!");
+}else{
+  alert("did not validate");
+}
+</script>
+
+</body>
+</html>
