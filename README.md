@@ -23,7 +23,7 @@ But with extra checks for `acl`-fields
     // here we validated, and checked whether this user is allowed 
     // to create with his current roles 
 
-Complete example:
+## Complete example
 
     var v = require("jsonschema-acl");
   

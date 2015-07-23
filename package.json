@@ -1,6 +1,6 @@
 {
   "name": "jsonschema-acl",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "lightweight jsonschema validator with acl-sauce on top",
   "main": "index.js",
   "directories": {
