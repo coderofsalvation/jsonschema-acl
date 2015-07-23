@@ -23,9 +23,9 @@ Basically its just jsonschema validation which checks for an `acl`-field
           type: "number",
           acl: {
             create: ["admin", "user"],
-            read: ["*"],
+            read:   ["*"],
             update: ["admin"],
-            "delete": ["admin"]
+            delete: ["admin"]
           }
         }
       }
