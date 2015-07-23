@@ -1,0 +1,25 @@
+{
+  "name": "jsonschema-acl",
+  "version": "0.0.4",
+  "description": "lightweight jsonschema validator with acl-layer added to aid comfortable dbinserts,apireplies,form submits",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderofsalvation/jsonschema-acl.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderofsalvation/jsonschema-acl/issues"
+  },
+  "homepage": "https://github.com/coderofsalvation/jsonschema-acl",
+  "dependencies": {
+    "jsonschema": "^1.0.2"
+  }
+}
