@@ -1,6 +1,6 @@
 {
   "name": "jsonschema-acl",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "lightweight jsonschema validator with acl-layer added to aid comfortable dbinserts,apireplies,form submits",
   "main": "index.js",
   "directories": {
