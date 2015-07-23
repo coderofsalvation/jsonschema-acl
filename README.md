@@ -6,11 +6,11 @@ Handy validator before doing db inserts, api replies, form submits etc.
 
 ### Usage 
 
+    npm install jsonschema-acl
+
 Basically its just jsonschema validation which checks for an `acl`-field
 
-    var data, result, schema, v;
-  
-    var v = require(__dirname + '/../index.js');
+    var v = require("jsonschema-acl");
   
     var data = {
       foo: 4
