@@ -26,16 +26,16 @@ But with extra checks for `acl`-fields
   
     var schema = {
       type: "object",
+      acl: {
+        create: ["admin", "user"],
+        read:   ["*"],
+        update: ["admin"],
+        delete: ["admin"],
+        rollback: ["admin"]            // feel free to add your own operations
+      },
       properties: {
         foo: {
-          type: "number",
-          acl: {
-            create: ["admin", "user"],
-            read:   ["*"],
-            update: ["admin"],
-            delete: ["admin"],
-            rollback: ["admin"]            // feel free to add your own operations
-          }
+          type: "number"
         }
       }
     };
@@ -49,10 +49,18 @@ But with extra checks for `acl`-fields
       // or api reply 
       // or form submission 
       // etc
-    
+
+> NOTE: you can override / add acl fields at any place
+
 ### Docs 
 
 * see [jsonschema](https://www.npmjs.com/jsonschema) which is used under the hood
+
+### Notes
+
+You don't have to specify acl fields for every field.
+The more highlevel the acl-fields are located in the jsonschema-tree, the better.
+Try defining them for object-types only for instance.
 
 ### Todo 
 

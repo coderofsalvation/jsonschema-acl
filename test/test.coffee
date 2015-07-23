@@ -4,14 +4,14 @@ data = { foo: 4 }
 
 schema =
   type: "object"
+  acl: 
+    create:["admin","user"]
+    read:  ["*"]
+    update:["admin"]
+    delete:["admin"]
   properties:
     foo:
       type: "number"
-      acl: 
-        create:["admin","user"]
-        read:  ["*"]
-        update:["admin"]
-        delete:["admin"]
 
 # pass wrong roles
 result = v.validate(data, schema, "create", "user") 
@@ -33,3 +33,4 @@ if result.errors.length != 0
 
 console.log "tests passed"
 process.exit(0)
+

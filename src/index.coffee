@@ -11,6 +11,8 @@ v.attributes.acl = (data, schema, options, ctx) ->
     return if role in schema.acl[ options.operation ] 
   return "this operation ("+options.operation+") is not allowed for this user"
 
+exports.parent = v
+
 exports.validate = (data, schema, operation, roles ) ->
   v.validate(data,schema, {operation:operation, roles:roles} ) 
 

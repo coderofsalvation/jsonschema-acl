@@ -30,6 +30,8 @@
     return "this operation (" + options.operation + ") is not allowed for this user";
   };
 
+  exports.parent = v;
+
   exports.validate = function(data, schema, operation, roles) {
     return v.validate(data, schema, {
       operation: operation,
