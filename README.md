@@ -17,6 +17,13 @@ Basically its just jsonschema validation:
     result = v.validate(data, schema ) // this would be GOD-mode
 
 But with extra checks for `acl`-fields
+   
+    result = v.validate( data, schema, "create", ["admin","user"] )
+
+    // here we validated, and checked whether this user is allowed 
+    // to create with his current roles 
+
+Complete example:
 
     var v = require("jsonschema-acl");
   
@@ -50,7 +57,7 @@ But with extra checks for `acl`-fields
       // or form submission 
       // etc
 
-> NOTE: you can override / add acl fields at any place
+> NOTE: you can override / add acl fields at any place in the jsonschema
 
 ### Docs 
 
