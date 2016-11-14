@@ -5,6 +5,7 @@ v = new Validator()
 
 v.attributes.acl = (data, schema, options, ctx) ->
   return if not options.operation? or not options.roles?
+  return if not schema.acl[ options.operation  ]
   return "roles-variable of validate() should be array of strings" if typeof options.roles == "string"
   return if "*" in schema.acl[ options.operation ] 
   for role in options.roles

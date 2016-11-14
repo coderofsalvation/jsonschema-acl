@@ -11,7 +11,7 @@
 
   v.attributes.acl = function(data, schema, options, ctx) {
     var i, len, ref, role;
-    if ((options.operation == null) || (options.roles == null)) {
+    if ((options.operation == null) || (options.roles == null) || !schema.acl[options.operation] ) {
       return;
     }
     if (typeof options.roles === "string") {
